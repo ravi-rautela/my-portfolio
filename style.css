@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Chilanka&family=Grape+Nuts&family=Roboto:ital,wght@0,300;1,100&family=Smooch&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.homeSection {
+    height: 100vh;
+    width: 100%;
+    background-image: url('Components/Images/bg.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    /* overflow-x: hidden; */
+}
+
+.homeSection::after {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 15px;
+    text-align: center;
+    align-items: center;
+    backdrop-filter: blur(3.5px);
+
+}
+
+.navbar img {
+    width: 54px;
+    cursor: pointer;
+}
+
+.navbar .Menu ul {
+    display: flex;
+}
+
+.Menu ul li {
+    padding-left: 3rem;
+    list-style: none;
+}
+
+
+
+.Menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18.5px;
+    font-family: 'Chilanka', cursive;
+    font-weight: bold;
+    transition: 0.5s ease;
+}
+
+.Menu ul li a:hover {
+    color: rgb(164, 239, 67);
+    border-bottom: 2px solid rgb(255, 255, 253);
+}
+
+.centerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul li a.active {
+    color: rgb(164, 239, 67);
+    border-bottom: 2px solid rgb(255, 255, 253);
+}
+
+.centerText h1 {
+    font-family: 'Chilanka', cursive;
+    font-size: 60px;
+    color: white;
+}
+
+.centerText span {
+    color: rgb(164, 239, 67);
+}
+
+.btns .hireMe,
+.downloadCv {
+    padding: 8px 17px;
+    /* border: none; */
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5px;
+    font-family: 'Chilanka',
+        cursive;
+    font-size: 17px;
+}
+
+.downloadCv {
+    margin-left: 10px;
+    background-color: rgb(164, 239, 67);
+    transition: all 0.5s ease-in-out;
+    border: none;
+}
+
+.downloadCv a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.downloadCv:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(164, 239, 67);
+}
+
+.hireMe {
+    background-color: transparent;
+    color: white;
+    border: 2px solid rgb(164, 239, 67);
+    transition: all 0.5s ease-in-out;
+}
+
+.hireMe a {
+    text-decoration: none;
+    color: white;
+}
+
+.hireMe:hover {
+    background-color: rgb(164, 239, 67);
+    color: black;
+}
+
+@media (max-width:650px) {
+    .homeSection {
+        height: 100vh;
+        width: 100%;
+        background-image: url('Components/Images/bg.webp');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        z-index: 1;
+        overflow-x: hidden;
+    }
+
+    .navbar .Menu ul {
+        margin: 20px 0px;
+    }
+
+    .centerText {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%, -40%);
+    }
+
+    .centerText h1 {
+        font-family: 'Chilanka', cursive;
+        font-size: 45px;
+        color: white;
+    }
+
+
+}
+
+/* Home secton css code is compelete now code with another section */
+
+/* ********************code for about section ************************* */
+.aboutSection {
+    height: fit-content;
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.aboutSection .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgAbout {
+    height: 90vh;
+    width: 100%;
+    background-image: url("components/Images/aboutImage.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 3px 3px 12px rgb(181, 177, 177);
+    border-radius: 6px;
+    margin: 10px 5%;
+}
+
+.intro span {
+    color: rgb(170, 223, 101);
+}
+
+.content .intro h1 {
+    font-family: 'Chilanka', cursive;
+    font-weight: bold;
+
+}
+
+.content .intro p {
+    line-height: 22px;
+}
+
+
+.address {
+    display: flex;
+}
+
+.address .keys,
+.value {
+    display: flex;
+    font-family: 'Chilanka', cursive;
+    width: 150px;
+    line-height: 32px;
+    flex-direction: column;
+}
+
+.address .value span {
+    color: rgb(170, 223, 101);
+}
+
+.intro .hobby {
+    display: flex;
+    margin-top: 40px;
+}
+
+.hobby div {
+    display: flex;
+    font-family: 'Chilanka', cursive;
+    font-weight: bold;
+    justify-content: center;
+    border-left: 2px solid black;
+    padding-left: 10px;
+    margin-right: 35px;
+}
+
+.hobby div img {
+    margin-right: 5px;
+    width: 16px;
+}
+
+/* Skill Section css code are here */
+.skillSection {
+    background-color: rgb(235, 237, 237);
+    font-family: 'Chilanka', cursive;
+    box-shadow: 2px 3px 10px gray;
+}
+
+.skillSection h1 {
+    text-align: center;
+    padding-top: 30px;
+}
+
+.skillSection p {
+    text-align: center;
+    padding: 12px 0px;
+}
+
+.skillSection .grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    row-gap: 30px;
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+.grid-container .grid-item {
+    box-shadow: 2px 3px 10px rgb(181, 181, 181);
+    border-radius: 6px;
+    padding: 20px;
+    width: 20rem;
+    height: 11rem;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgb(242, 240, 240);
+}
+
+@media (min-width:300px) and (max-width:1122px) {
+    .skillSection .grid-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 30px;
+        row-gap: 30px;
+        padding: 10px;
+    }
+
+    .grid-container .grid-item {
+        box-shadow: 2px 3px 10px rgb(181, 181, 181);
+        border-radius: 6px;
+        padding: 20px;
+        width: 12rem;
+        height: 11rem;
+        font-size: 15px;
+        text-align: center;
+        font-weight: bold;
+        background-color: rgb(242, 240, 240);
+    }
+}
+
+
+.prograssBar {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+.progress-circle {
+    font-size: 20px;
+    margin: 20px;
+    position: relative;
+    padding: 0;
+    width: 5em;
+    height: 5em;
+    background-color: #F2E9E1;
+    border-radius: 50%;
+    line-height: 5em;
+}
+
+.progress-circle:after {
+    border: none;
+    position: absolute;
+    top: 0.35em;
+    left: 0.35em;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 4.3em;
+    height: 4.3em;
+    background-color: white;
+    content: " ";
+}
+
+/* Text inside the control */
+.progress-circle span {
+    position: absolute;
+    line-height: 5em;
+    width: 5em;
+    text-align: center;
+    display: block;
+    color: #53777A;
+    z-index: 2;
+}
+
+.left-half-clipper {
+    /* a round circle */
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+    position: absolute;
+    /* needed for clipping */
+    clip: rect(0, 5em, 5em, 2.5em);
+}
+
+.progress-circle.over50 .left-half-clipper {
+    clip: rect(auto, auto, auto, auto);
+}
+
+.value-bar {
+    position: absolute;
+    clip: rect(0, 2.5em, 5em, 0);
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+    border: 0.45em solid rgb(170, 223, 101);
+    box-sizing: border-box;
+
+}
+
+.progress-circle.over50 .first50-bar {
+    position: absolute;
+    clip: rect(0, 5em, 5em, 2.5em);
+    background-color: rgb(170, 223, 101);
+    border-radius: 50%;
+    width: 5em;
+    height: 5em;
+}
+
+.progress-circle:not(.over50) .first50-bar {
+    display: none;
+}
+
+/* Progress bar rotation position */
+.progress-circle.p0 .value-bar {
+    display: none;
+}
+
+/* Progress bar roration */
+.progress-circle.p50 .value-bar {
+    transform: rotate(180deg);
+}
+
+.progress-circle.p55 .value-bar {
+    transform: rotate(198deg);
+}
+
+
+.progress-circle.p60 .value-bar {
+    transform: rotate(216deg);
+}
+
+.progress-circle.p65 .value-bar {
+    transform: rotate(234deg);
+}
+
+.progress-circle.p80 .value-bar {
+    transform: rotate(288deg);
+}
+
+/* code for project section */
+.projectSection {
+    background-color: rgb(245, 245, 245);
+}
+
+.g1 {
+    background-image: url("components/Images/phone.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backdrop-filter: blur(15px);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.g2 {
+    background-image: url("components/Images/library.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.g3 {
+    background-image: url("components/Images/ps.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.g4 {
+    background-image: url("components/Images/game.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: white;
+}
+
+footer {
+    background-color: rgb(14, 10, 10);
+    color: white;
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Chilanka', cursive;
+    ;
+}
+
+.social-account {
+    display: flex;
+    justify-content: center;
+}
+
+.social-account img {
+    margin: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.contactMe {
+    padding: 26px 0px;
+}
+
+.contactMe .nameSection {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    margin: 0px 26%;
+}
+
+.contactMe .emailSection {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 27%;
+}
+
+.nameSection input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-family: 'Chilanka', cursive;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+}
+
+.nameSection .fname {
+    margin-right: 20px;
+}
+
+@media (min-width:300px) and (max-width:1122px) {
+    .contactMe .nameSection {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px 26%;
+    }
+
+    .nameSection .fname {
+        margin: 13px 0px;
+
+    }
+
+    .contactMe .emailSection {
+        display: flex;
+        flex-direction: column;
+        margin: 10px 26%;
+    }
+}
+
+.emailSection .btn {
+    padding: 10px;
+    border: none;
+    outline: none;
+    box-shadow: 3px 2px 5px rgb(185, 184, 184);
+    margin-top: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(170, 223, 101);
+    color: white;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-in-out;
+}
+
+.emailSection .btn:hover {
+    background-color: transparent;
+    color: black;
+}
